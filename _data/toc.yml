@@ -21,3 +21,8 @@
       url: "about"
     - title: "News"
       url: "news"
+    - title: "Database"
+      url: "docs/database"
+      children:
+        - title: PostgreSQL
+          url: "docs/database/postgresql"
