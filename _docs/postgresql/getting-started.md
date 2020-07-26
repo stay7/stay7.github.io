@@ -1,19 +1,10 @@
 ---
 title: "PostgreSQL Getting Started"
 date: 2020-07-26 22:21:00 +0900
-categories: postgreSQL
+layout: post
 tags: 
  - postgreSQL
 description: Getting started with `PostgreSQL`
-badges:
- - type: primary
-   tag: primary-badge
- - type: secondary
-   tag: secondary-badge
- - type: info
-   tag: info-badge
- - type: success
-   tag: success-badge
 ---
 
 
