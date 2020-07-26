@@ -14,9 +14,9 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: toy-woody
+title: forky
 email: codeLatte20@gmail.com
-author: woody
+author: forky
 description: > # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for
@@ -29,9 +29,9 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://vsoch.github.io" # the base hostname & protocol for your site
 
 # Social (First three Required)
-repo: "https://github.com/toy-woody/toy-woody.github.io"
-github_user: "toy-woody"
-github_repo: "toy-woody"
+repo: "https://github.com/forky2019/forky2019.github.io"
+github_user: "forky2019"
+github_repo: "forky2019.github.io"
 
 # Optional
 # twitter: vsoch
