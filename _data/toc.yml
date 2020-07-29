@@ -23,3 +23,5 @@
     #   url: "news"
     - title: PostgreSQL
       url: "docs/postgresql"
+    - title: Elasticsearch
+      url: "docs/elasticsearch"
