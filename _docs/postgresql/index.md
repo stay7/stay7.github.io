@@ -1,10 +1,9 @@
 ---
 title: PostgreSQL
+layout: index
 description: PostgreSQL index
 tags:
- - PostgreSQL
+  - PostgreSQL
 ---
 
-# PostgreSQL
-
-  - [**getting-started**](getting-started)
+- [**getting-started**](getting-started)
