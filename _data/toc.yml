@@ -1,12 +1,12 @@
 - title: Documentation
   url: docs
   links:
-    - title: "Getting Started"
-      url: "docs/getting-started"
+    - title: 'Getting Started'
+      url: 'docs/getting-started'
     - title: PostgreSQL
-      url: "docs/postgresql"
+      url: 'docs/postgresql'
     - title: Elasticsearch
-      url: "docs/elasticsearch"
+      url: 'docs/elasticsearch'
 #     #   children:
 #     #     - title: Features
 #     #       url: "docs/getting-started#getting-started"

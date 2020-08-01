@@ -1,5 +1,5 @@
 ---
-title: "Ubuntu에 elasticsearch 배포"
+title: 'Ubuntu에 elasticsearch 배포'
 date: 2020-07-29 23:29:00 +0900
 layout: post
 toc: true
@@ -47,7 +47,7 @@ http.port: 9200
 
 discovery.seed_hosts: []
 discovery.zen.minimum_master_nodes: 1
-cluster.initial_master_nodes: ["ip-172-31-3-121"]
+cluster.initial_master_nodes: ['ip-172-31-3-121']
 ```
 
 <br><br>

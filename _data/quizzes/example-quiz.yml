@@ -1,8 +1,8 @@
 title: This is the Quiz Title
 randomized: false
 questions:
-  - type: "multiple-choice"
-    question: "What is your favorite color?"
+  - type: 'multiple-choice'
+    question: 'What is your favorite color?'
     items:
       - choice: Red
         correct: null
@@ -12,8 +12,8 @@ questions:
         correct: null
     followup: There is no correct answer to asking your favorite color! All choices would be good.
 
-  - type: "multiple-choice"
-    question: "True or False, Pittsburgh is West of Philadelphia"
+  - type: 'multiple-choice'
+    question: 'True or False, Pittsburgh is West of Philadelphia'
     items:
       - choice: True
         correct: true

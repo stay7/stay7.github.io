@@ -1,5 +1,5 @@
 ---
-title: "PostgreSQL Getting Started"
+title: 'PostgreSQL Getting Started'
 date: 2020-07-26 22:21:00 +0900
 layout: post
 toc: true
