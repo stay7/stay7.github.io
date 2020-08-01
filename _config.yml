@@ -29,9 +29,9 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://vsoch.github.io" # the base hostname & protocol for your site
 
 # Social (First three Required)
-repo: "https://github.com/forky2019/forky2019.github.io"
-github_user: "forky2019"
-github_repo: "forky2019.github.io"
+# repo: "https://github.com/forky2019/forky2019.github.io"
+# github_user: "forky2019"
+# github_repo: "forky2019.github.io"
 
 # Optional
 # twitter: vsoch
