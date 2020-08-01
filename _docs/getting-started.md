@@ -1,8 +1,8 @@
 ---
 title: Getting Started
-tags: 
- - jekyll
- - github
+tags:
+  - jekyll
+  - github
 description: Getting started with Docsy Jekyll
 ---
 
@@ -12,9 +12,8 @@ description: Getting started with Docsy Jekyll
 
 ### User Interaction
 
-
 On the right side of any page, you'll notice links to edit the page, or
-open an issue. This ensures that any time you have a question or want to 
+open an issue. This ensures that any time you have a question or want to
 suggest or request a change, you can do so immediately and link directly
 to the section of interest. The sections on the page also have permalinks so
 you can link directly to them.
@@ -40,14 +39,14 @@ but should not be included in search.
 
 If you have an external site with a search GET endpoint (meaning one that ends
 in `?q=<term>`, then you can automatically link page tags to search this endpoint.
-For example, on an HPC site I'd want a tag like "mpi" to do a search on 
+For example, on an HPC site I'd want a tag like "mpi" to do a search on
 [http://ask.cyberinfrastructure.org](http://ask.cyberinfrastructure.org) for mpi.
 See the [tags](#tags) section below for how to configure this.
 
 ### Documentation
 
 Documentation pages should be written in the `docs` folder of the repository,
-and you are allowed to use whatever level of nesting (subfolders) that 
+and you are allowed to use whatever level of nesting (subfolders) that
 works for you! It's a Jekyll [collection](https://jekyllrb.com/docs/collections/), which means that you
 can add other content (images, scripts) and it will be included for linking to.
 
@@ -65,7 +64,6 @@ docs/
 
 The first page (akin to the one you are reading) would render at it's path,
 `/docs/getting-started/`.
-
 
 #### Linking
 
@@ -91,23 +89,24 @@ or just put the relative path:
 {% raw %}[Here](example-page){% endraw %}
 ```
 
-or better, there is a shortand trick! We can use the provided "includes" 
+or better, there is a shortand trick! We can use the provided "includes"
 template to do the same based on the path to create a link:
 
 ```
 {% raw %}{% include doc.html name="Sherlock Cluster" path="clusters/sherlock/getting-started" %}{% endraw %}
 ```
+
 The path should be relative to the docs folder.
 
 ### Pages
 
 The `pages` folder uses the same page layout, but is not part of the docs collection.
 The two are provided to create a distinction between website pages (e.g., about,
-feed.xml) and documentation pages.  
+feed.xml) and documentation pages.
 
 ### Navigation
 
-Whether you place your page under "pages" or "docs," for those pages that you want added to the navigation, 
+Whether you place your page under "pages" or "docs," for those pages that you want added to the navigation,
 you should add them to `_data/toc.yml`. If you've defined a `permalink` in the
 front end matter, you can use that (e.g., "About" below). If you haven't and
 want to link to docs, the url is the path starting with the docs folder.
@@ -140,8 +139,8 @@ Here is an example (currently the active example):
 If you want to add an external url for a parent or child, do this:
 
 ```yaml
-  - title: GitHub Repository
-    external_url: https://www.github.com/vsoch/mkdocs-jekyll
+- title: GitHub Repository
+  external_url: https://www.github.com/vsoch/mkdocs-jekyll
 ```
 
 ### News Posts
@@ -179,15 +178,16 @@ a post:
 
 ```yaml
 ---
-title:  "Two Thousand Nineteen"
-date:   2019-06-28 18:52:21
+title: "Two Thousand Nineteen"
+date: 2019-06-28 18:52:21
 categories: jekyll update
 badges:
- - type: warning
-   tag: warning-badge
- - type: danger
-   tag: danger-badge
+  - type: warning
+    tag: warning-badge
+  - type: danger
+    tag: danger-badge
 ---
+
 ```
 
 And here is the post preview with the rendered badges that it produces:
@@ -222,7 +222,7 @@ Just for fun, here are all the types:
 
 ### Quotes
 
-You can include block quotes to emphasize text. 
+You can include block quotes to emphasize text.
 
 > Here is an example. Isn't this much more prominent to the user?
 
@@ -295,7 +295,6 @@ $ git clone https://github.com/<username>/mkdocs-jekyll.git docs
 $ cd docs
 ```
 
-
 ### Serve
 
 Depending on how you installed jekyll:
@@ -305,7 +304,6 @@ jekyll serve
 # or
 bundle exec jekyll serve
 ```
-
 
 ### Preview
 
@@ -319,9 +317,9 @@ the static files location to be the name of your respository, which is at te
 bottom of the `.circleci/config.yml` file:
 
 ```yaml
-      - store_artifacts:
-          path: ~/repo/_site
-          destination: mkdocs-jekyll
+- store_artifacts:
+    path: ~/repo/_site
+    destination: mkdocs-jekyll
 ```
 
 In the above, the destination should coincide with your repository name.
@@ -332,6 +330,7 @@ you might need to turn this:
 ```
 https://<circleci>/0/mkdocs-jekyll/docs/getting-started/
 ```
+
 into this:
 
 ```
@@ -342,14 +341,14 @@ https://<circleci>/0/mkdocs-jekyll/docs/getting-started/index.html
 
 #### config.yml
 
-To edit configuration values, customize the [_config.yml](_config.yml).
+To edit configuration values, customize the [\_config.yml](_config.yml).
 Most are documented there, and please [open an issue](https://www.github.com/{{ site.github_user }}/{{ site.github_user }}/issues) if you have questions.
 
 #### Adding pages
 
-To add pages, write them into the [pages](pages) folder. 
+To add pages, write them into the [pages](pages) folder.
 You define urls based on the `permalink` attribute in your pages,
-and then add them to the navigation by adding to the content of [_data/toc.yml](_data/toc.yml).
+and then add them to the navigation by adding to the content of [\_data/toc.yml](_data/toc.yml).
 
 #### Tags
 
@@ -368,9 +367,9 @@ as they do on this page. The tags should be defined like this in the front end
 matter:
 
 ```yaml
-tags: 
- - jekyll
- - github
+tags:
+  - jekyll
+  - github
 ```
 
 They are appended to the first h1 block, so generally your pages should have a header.
@@ -381,4 +380,3 @@ spot on the tags page linked above.
 #tag_search_endpoint: https://ask.cyberinfrastructure.org/search?q=
 tag_color: primary # danger, success, warning, primary, info, secondary
 ```
-

@@ -3,8 +3,8 @@ layout: page
 ---
 
 <h1 style="margin-bottom: 0px;">{{ page.title }}</h1>
-{% if page.badges %}{% for badge in page.badges %}
+{% if page.badges %} {% for badge in page.badges %}
 <span class="badge badge-{{ badge.type }}">{{ badge.tag }}</span>
-{% endfor %}{% endif %}
+{% endfor %} {% endif %}
 <span class="post-date">{{ page.date | date: "%Y-%m-%d-%H:%M" }}</span>
 {{ content }}

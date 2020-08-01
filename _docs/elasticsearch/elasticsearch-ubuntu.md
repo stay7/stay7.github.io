@@ -2,17 +2,16 @@
 title: "Ubuntu에 elasticsearch 배포"
 date: 2020-07-29 23:29:00 +0900
 layout: post
-tags: 
- - Elasticsearch
+toc: true
+tags:
+  - Elasticsearch
 ---
-
-
 
 ### 설정 환경
 
-| Ubuntu | vCPU  | Memory |
-| :----: | :---: | :----: |
-| 18.04  |   2   |  4 GB  |
+| Ubuntu | vCPU | Memory |
+| :----: | :--: | :----: |
+| 18.04  |  2   |  4 GB  |
 
 <br><br>
 
@@ -30,10 +29,10 @@ default로 실행하면 `localhost`에서는 정상 작동하지만, remote clie
 
 default configure로 실행하면 dev 환경으로 실행된다.
 <br><br>
+
 ### Error
 
-> max virtual memory areas vm.max_map_count [65530] is too low, increase to at least [262144]
-`$ sysctl -w vm.max_map_count=262144` 으로 에러 해결 가능
+> max virtual memory areas vm.max_map_count [65530] is too low, increase to at least [262144] > `$ sysctl -w vm.max_map_count=262144` 으로 에러 해결 가능
 
 <br><br>
 

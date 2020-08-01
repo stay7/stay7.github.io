@@ -68,6 +68,10 @@ permalink: /:year/:title/
 markdown: kramdown
 exclude: [_site, CHANGELOG.md, LICENSE, README.md, vendor]
 
+# Plugins
+plugins:
+  - jekyll-toc
+
 # Collections
 collections:
   docs:

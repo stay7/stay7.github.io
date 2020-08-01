@@ -2,13 +2,11 @@
 title: "PostgreSQL Getting Started"
 date: 2020-07-26 22:21:00 +0900
 layout: post
-tags: 
- - postgreSQL
+toc: true
+tags:
+  - postgreSQL
 description: Getting started with `PostgreSQL`
 ---
-
-
-
 
 ### [Data types]
 
@@ -41,7 +39,6 @@ PostgreSQL의 data types
 <hr>
 <br>
 
-
 ### [Database 생성]
 
 ```shell
@@ -51,9 +48,8 @@ $ createdb mydb
 
 정상적으로 생성되면 출력이 없다.
 
-
-
 #### 자주 나타나는 오류
+
 ```shell
 # PostgreSQL이 정상적으로 설치 되지 않으면
 createdb : command not found
@@ -68,7 +64,6 @@ connections on Unix domain socket "/tmp/.s.PGSQL.5432"?
 <hr>
 <br>
 
-
 ### [Database 제거]
 
 ```shell
@@ -76,14 +71,11 @@ connections on Unix domain socket "/tmp/.s.PGSQL.5432"?
 $ dropdb mydb
 ```
 
-
-
 PostgreSQL의 user는 OS의 user와 분리되어있다. DB에 연결할 때 PostgreSQL의 user name을 선택해서 연결할 수 있다. 선택하지 않으면 OS와 같은 name으로 연결된다. `-U` 옵션을 이용해서 PostgreSQL의 user name을 선택할 수 있다.
 
 <br>
 <hr>
 <br>
-
 
 ### [Database access]
 
@@ -91,8 +83,6 @@ PostgreSQL의 user는 OS의 user와 분리되어있다. DB에 연결할 때 Post
 - `pgAdmin`과 같은 GUI tool을 사용
 
 크게 두 가지 방법이 있다.
-
-
 
 ```shell
 # mydb에 접근
@@ -107,8 +97,6 @@ mydb=>
 
 - `mydb =#` database의 superuser
 
-
-
 ```shell
 # SQL command의 syntax를 볼 수 있음
 mydb=> \h
@@ -116,4 +104,3 @@ mydb=> \h
 # 접속 종료
 mydb=> \q
 ```
-
