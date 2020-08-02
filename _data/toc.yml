@@ -6,6 +6,7 @@
 
     - title: Elasticsearch
       url: 'docs/elasticsearch'
+
       #
     # - title: Documentation
     #   url: docs
@@ -33,6 +34,9 @@
 
 - title: PostgreSQL
   url: 'docs/postgresql'
-  # links:
 - title: Elasticsearch
   url: 'docs/elasticsearch'
+- title: 'Sequelize'
+  url: 'docs/sequelize/getting-started'
+- title: 'Model-Basics'
+  url: 'docs/sequelize/model-basics'

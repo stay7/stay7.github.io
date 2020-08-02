@@ -104,3 +104,15 @@ mydb=> \h
 # 접속 종료
 mydb=> \q
 ```
+
+- select database
+
+```shell
+postgres=# \c table_name
+```
+
+- show tables
+
+```shell
+postgres=# \dt
+```

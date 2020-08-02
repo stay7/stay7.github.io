@@ -1,4 +1,11 @@
-# Model Basics
+---
+title: 'Model Basics'
+date: 2020-08-02 00:00:00 +0900
+layout: post
+tags:
+  - Sequelize
+description: Model Basics
+---
 
 Model은 DB의 table을 추상적으로 표한현 것이다. Model은 Sequelize에 없어서는 안되는 존재다. Model은 DB의 테이블과 이름이 같으면 안된다. 보통 Model에서는 단수형 (User)으로 쓰고, 테이블의 이름은 복수(Users)로 사용한다.
 
@@ -72,7 +79,7 @@ sequelize.define('User', {
 })
 
 // 간단
-sequelize.defind('User', { name: DataTypes.STRING })
+sequelize.define('User', { name: DataTypes.STRING })
 ```
 
 ### Default 값
@@ -81,7 +88,7 @@ sequelize에서 default값을 명시하지 않으면, column의 default 값은 `
 
 ```javascript
 // default 값 명시
-sequelize.defind('Foo', {
+sequelize.define('Foo', {
   bar: {
     type: DataTypes.STRING,
     defaultValue: 'John Doe',
