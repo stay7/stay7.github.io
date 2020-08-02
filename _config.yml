@@ -23,10 +23,10 @@ description: > # this means to ignore newlines until "baseurl:"
   Google search results) and in your feed.xml site description.
 
 # DO NOT CHANGE THE LINE OF THIS FILE without editing .circleci/circle_urls.sh
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: '' # the subpath of your site, e.g. /blog
 
 # This is mostly for testing
-url: "https://vsoch.github.io" # the base hostname & protocol for your site
+url: 'https://vsoch.github.io' # the base hostname & protocol for your site
 
 # Social (First three Required)
 # repo: "https://github.com/forky2019/forky2019.github.io"
@@ -49,11 +49,12 @@ feedback: false
 # If commented, will use material hat theme
 # logo: "assets/img/logo/SRCC-square-red.png"
 logo_pixels: 34
-color: "#30638e"
+color: '#30638e'
 # color: "#8c1515" # primary color for header, buttons
 
 # Build settings
 markdown: kramdown
+input: GFM
 
 # If you add tags to pages, define this variable to link them to some external search
 # If you want to link to tags locally on the site, leave this commented out
@@ -65,7 +66,7 @@ themeColor: red # purple, green, blue, orange, purple, grey
 fixedNav: 'true' # true or false
 
 permalink: /:year/:title/
-markdown: kramdown
+
 exclude: [_site, CHANGELOG.md, LICENSE, README.md, vendor]
 
 # Plugins
@@ -81,19 +82,17 @@ collections:
 # Defaults
 defaults:
   - scope:
-      path: "_docs"
-      type: "docs"
+      path: '_docs'
+      type: 'docs'
     values:
       layout: page
-  -
-    scope:
-      path: ""
-      type: "pages"
+  - scope:
+      path: ''
+      type: 'pages'
     values:
-      layout: "page"
-  -
-    scope:
-      path: "posts"
-      type: "posts"
+      layout: 'page'
+  - scope:
+      path: 'posts'
+      type: 'posts'
     values:
-      layout: "post"
+      layout: 'post'
