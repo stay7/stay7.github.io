@@ -4,5 +4,6 @@ layout: post
 permalink: /sangmin/todo
 ---
 
-- [ ] UUIDV1 vs UUIDV4
+- [x] UUIDV1 vs UUIDV4
 - [ ] sequelize find query
+- [ ] blog toc 정리
