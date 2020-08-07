@@ -98,7 +98,7 @@ SELECT id, foo, bar, hats, COUNT(hats) AS n_hats FROM ...
 
 
 
-### The basics
+#### The basics
 
 - single check
 
@@ -165,6 +165,42 @@ Post.findAll({
   }
 });
 ```
+
+
+
+### UPDATE
+
+```javascript
+await User.update({ lastName: "Doe" }, {
+  where: {
+    lastName: null
+  }
+});
+```
+
+
+
+### DELETE
+
+```javascript
+await User.destroy({
+  where: {
+    firstName: "Jane"
+  }
+});
+```
+
+
+
+Table 전체를 삭제하기위해서는 `TRUNCATE` 를 사용하면 된다.
+
+```javascript
+await User.destroy({
+  truncate: true
+})
+```
+
+
 
 
 
