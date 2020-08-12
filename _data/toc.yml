@@ -1,44 +1,21 @@
-- title: Documentation
-  url: docs
+- title: 'DB'
+  url: 'docs/db'
   links:
-    - title: 'Getting Started'
-      url: 'docs/getting-started'
+    - title: 'entry'
+      url: 'docs/db'
 
-    - title: Elasticsearch
-      url: 'docs/elasticsearch'
-
-      #
-    # - title: Documentation
-    #   url: docs
-    #   links:
-    #     - title: 'Getting Started'
-    #       url: 'docs/getting-started'
-    #       children:
-    #         - title: Features
-    #           url: 'docs/getting-started#getting-started'
-    #         - title: Development
-    #           url: 'docs/getting-started#development'
-    #         - title: Customization
-    #           url: 'docs/getting-started#customization'
-    #     - title: 'Extras'
-    #       url: 'docs/extras'
-    #       children:
-    #         - title: Quizzes
-    #           url: 'docs/extras/example-quiz'
-    #     - title: 'About'
-    #       url: 'about'
-    #     - title: 'News'
-    #       url: 'news'
-    #     - title: GitHub Repository
-    #       external_url: https://www.github.com/vsoch/mkdocs-jekyll
-
-- title: PostgreSQL
-  url: 'docs/postgresql'
-- title: Elasticsearch
+- title: 'programming'
+  url: 'docs/programming'
+  links:
+    - title: 'entry'
+      url: 'docs/db'
+- title: 'server'
+  url: 'docs/server'
+  links:
+    - title: 'entry'
+      url: 'docs/db'
+- title: 'elasticsearch'
   url: 'docs/elasticsearch'
-- title: 'Sequelize'
-  url: 'docs/sequelize/getting-started'
-- title: 'Model-Basics'
-  url: 'docs/sequelize/model-basics'
-- title: 'TODO'
-  url: 'docs/private/todo'
+  links:
+    - title: 'entry'
+      url: 'docs/db'

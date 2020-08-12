@@ -1,3 +1,5 @@
+# https://vsoch.github.io/docsy-jekyll/
+
 # Welcome to Jekyll!
 #
 # This config file is meant for settings that affect your whole blog, values
@@ -14,9 +16,9 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: forky
+title: stayChill
 email: codeLatte20@gmail.com
-author: forky
+author: stayChill
 description: > # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for
@@ -52,7 +54,7 @@ logo_pixels: 34
 color: '#30638e'
 # color: "#8c1515" # primary color for header, buttons
 
-# Build settings
+# Conversion
 markdown: kramdown
 input: GFM
 
@@ -77,6 +79,9 @@ plugins:
 collections:
   docs:
     output: true
+    permalink: /:collection/:path
+  elasticsearch:
+    output: false
     permalink: /:collection/:path
 
 # Defaults
