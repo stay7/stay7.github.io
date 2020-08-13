@@ -1,21 +1,19 @@
 - title: 'DB'
   url: 'docs/db'
   links:
-    - title: 'entry'
-      url: 'docs/db'
+    - title: 'PostgreSQL'
+      url: 'docs/db/postgresql'
+    - title: 'sequelize'
+      url: 'docs/db/sequelize'
 
-- title: 'programming'
-  url: 'docs/programming'
-  links:
-    - title: 'entry'
-      url: 'docs/db'
+# - title: 'programming'
+#   url: 'docs/programming'
+#   links:
+#     - title: 'entry'
+#       url: 'docs/db'
+
 - title: 'server'
   url: 'docs/server'
   links:
-    - title: 'entry'
-      url: 'docs/db'
-- title: 'elasticsearch'
-  url: 'docs/elasticsearch'
-  links:
-    - title: 'entry'
-      url: 'docs/db'
+    - title: 'elasticsearch'
+      url: 'docs/server'
