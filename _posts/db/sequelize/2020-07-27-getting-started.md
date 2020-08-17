@@ -3,7 +3,7 @@ title: 'Sequelize Getting Started'
 date: 2020-07-27 00:46:00 +0900
 layout: post
 tags:
-  - Sequelize
+  - sequelize
 description: Getting started with `Sequelize`
 ---
 

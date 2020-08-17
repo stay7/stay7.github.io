@@ -2,14 +2,10 @@
 
 <div id="td-sidebar-menu" class="td-sidebar__inner">
   <nav class="collapse td-sidebar-nav pt-2 pl-4" id="td-section-nav">
+    {% for tag in site.tags %} {% assign tagName = tag.first %}
     <ul class="td-sidebar-nav__section pr-md-3">
-      {% for tag in site.tags %} {% assign tagName = tag.first %}
-      <h1>{{ tagName }}</h1>
-      {% for category in site.categories %}
-      <h2>{{ category.first }}</h2>
-      {% for post in site.posts %} {% if post.tags contains tagName %}
-      <h3>{{ post.title }}</h3>
-      {% endif %} {% endfor %} {% endfor %} {% endfor %}
+      {{ tagName }} {{ site.tags[tagName] | size}}
     </ul>
+    {% endfor %}
   </nav>
 </div>

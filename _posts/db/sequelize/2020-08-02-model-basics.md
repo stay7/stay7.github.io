@@ -3,7 +3,7 @@ title: 'Model Basics'
 date: 2020-08-02 00:00:00 +0900
 layout: post
 tags:
-  - Sequelize
+  - sequelize
 description: Model Basics
 ---
 
