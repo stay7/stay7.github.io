@@ -11,3 +11,7 @@ permalink: /sangmin/todo
 - [ ] index.html layout 만들기 -> docs/ directory 안의 파일들을 list해주는 layout!
 - [ ] OAuth 2.0
 - [ ] 사이드바를 tag 형식으로 변경하기
+- [ ] jwt 토큰의 단점 알아보기
+- [ ] CSRF 발생이유
+- [ ] XSS 발생이유
+- [ ] spring boot vs sprint
