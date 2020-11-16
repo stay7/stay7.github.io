@@ -1,5 +1,6 @@
 import React from "react";
 import { graphql } from "gatsby";
+import Layout from "../components/layout";
 
 export default function TemplatePost({ data }) {
   const {
@@ -7,13 +8,11 @@ export default function TemplatePost({ data }) {
   } = data;
   const {date, path, title} = frontmatter
 
-  console.log(data)
-
   return (
-    <div>
+    <Layout>
       <h1>{frontmatter.title}</h1> 
       <div dangerouslySetInnerHTML={{ __html: html }} />
-    </div>
+    </Layout>
   );
 }
 
