@@ -1,5 +1,7 @@
 ---
 title: 테스트
+date: 2020-07-11
+path: test
 ---
 
 # Hi!
