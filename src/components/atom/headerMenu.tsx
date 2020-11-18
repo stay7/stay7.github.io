@@ -8,10 +8,22 @@ interface Props {
 }
 
 export default function HeaderMenu({ menuTitle, link }: Props) {
-  return <Button>{link && <Link to={link}>{menuTitle}</Link>}</Button>;
+  return (
+    <Button>
+      {link && (
+        <Link to={link}>
+          <Span>{menuTitle}</Span>
+        </Link>
+      )}
+    </Button>
+  );
 }
 
 const Button = styled.button`
   background-color: transparent;
   border-width: 0;
+`;
+
+const Span = styled.span`
+  font-family: Roboto;
 `;

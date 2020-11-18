@@ -5,15 +5,21 @@ import styled from "styled-components";
 
 // https://www.gatesnotes.com/
 
+const headers = [
+  { title: "BOOK1", link: "asdf" },
+  { title: "BOOK2", link: "asdf" },
+  { title: "BOOK3", link: "asdf" },
+];
+
 const Header = () => (
   <Container>
     <Link to="/" style={{ fontSize: "30px" }}>
       logo
     </Link>
     <div style={{ display: "flex", flexDirection: "row" }}>
-      <HeaderMenu menuTitle="BOOK" link="asdf" />
-      <HeaderMenu menuTitle="BOOK" link="123" />
-      <HeaderMenu menuTitle="BOOK" link="twer" />
+      {headers.map((header) => (
+        <HeaderMenu menuTitle={header.title} link={header.link} />
+      ))}
     </div>
   </Container>
 );

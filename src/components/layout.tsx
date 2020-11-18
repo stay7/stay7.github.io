@@ -9,6 +9,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { useStaticQuery, graphql } from "gatsby";
 import styled from "styled-components";
+import "fontsource-roboto";
 
 import Header from "./organisms/header";
 import "./layout.css";
