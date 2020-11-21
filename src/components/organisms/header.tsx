@@ -5,32 +5,50 @@ import styled from "styled-components";
 
 // https://www.gatesnotes.com/
 
+//나중에 darkmode 도 넣고싶음
 const headers = [
-  { title: "BOOK1", link: "asdf" },
-  { title: "BOOK2", link: "asdf" },
-  { title: "BOOK3", link: "asdf" },
+  { title: "Post", link: "post" },
+  { title: "About me", link: "me" },
 ];
 
 const Header = () => (
   <Container>
-    <Link to="/" style={{ fontSize: "30px" }}>
-      logo
-    </Link>
-    <div style={{ display: "flex", flexDirection: "row" }}>
+    <Logo>
+      <Link to="/" style={{ fontSize: "30px" }}>
+        logo
+      </Link>
+    </Logo>
+    <Menu>
       {headers.map((header) => (
         <HeaderMenu menuTitle={header.title} link={header.link} />
       ))}
-    </div>
+    </Menu>
   </Container>
 );
 
 const Container = styled.div`
-  display: flex;
-  align-items: "center";
-  justify-content: space-between;
+  width: 100%;
+  height: 66px;
+  display: inline-flex;
+  align-items: center;
   background-color: white;
   border-bottom: 1px solid black;
-  padding: 1em 1em;
+`;
+
+const Logo = styled.div`
+  display: flex;
+  width: 250px;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  border-right: solid 1px black;
+`;
+
+const Menu = styled.div`
+  display: flex;
+  height: 100%;
+  margin-left: auto;
+  padding-right: 3rem;
 `;
 
 export default Header;

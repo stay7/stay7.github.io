@@ -20,6 +20,8 @@ export default function HeaderMenu({ menuTitle, link }: Props) {
 }
 
 const Button = styled.button`
+  width: 100px;
+  height: 100%;
   background-color: transparent;
   border-width: 0;
 `;

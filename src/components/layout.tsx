@@ -7,12 +7,12 @@
 
 import React from "react";
 import PropTypes from "prop-types";
+import "./layout.css";
 import { useStaticQuery, graphql } from "gatsby";
 import styled from "styled-components";
 import "fontsource-roboto";
-
 import Header from "./organisms/header";
-import "./layout.css";
+import SideBar from "./organisms/sidebar";
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -29,35 +29,30 @@ const Layout = ({ children }) => {
     <Container>
       {/* <Header siteTitle={data.site.siteMetadata?.title || `Title`} /> */}
       <Header />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 1160,
-        }}
-      >
-        <main>{children}</main>
-        <footer
-          style={{
-            marginTop: `2rem`,
-          }}
-        >
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
-        </footer>
-      </div>
+
+      <Body>
+        <SideBar />
+        <Main>{children}</Main>
+      </Body>
     </Container>
   );
 };
 
 const Container = styled.div`
-  max-width: 1160px;
-  margin: 0 auto;
-  padding: 0 1.0875rem 1.45rem;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 `;
 
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
-};
+const Body = styled.div`
+  display: flex;
+  height: 100%;
+  width: 100%;
+`;
+
+const Main = styled.div`
+  flex: 1;
+  padding: 10px 10px;
+`;
 
 export default Layout;
