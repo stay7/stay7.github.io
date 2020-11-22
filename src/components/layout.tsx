@@ -6,7 +6,6 @@
  */
 
 import React from "react";
-import PropTypes from "prop-types";
 import "./layout.css";
 import { useStaticQuery, graphql } from "gatsby";
 import styled from "styled-components";
@@ -28,10 +27,9 @@ const Layout = ({ children }) => {
   return (
     <Container>
       {/* <Header siteTitle={data.site.siteMetadata?.title || `Title`} /> */}
-      <Header />
 
       <Body>
-        <SideBar />
+        <Header />
         <Main>{children}</Main>
       </Body>
     </Container>
@@ -39,20 +37,21 @@ const Layout = ({ children }) => {
 };
 
 const Container = styled.div`
-  display: flex;
-  flex-direction: column;
+  display: block;
   height: 100vh;
 `;
 
 const Body = styled.div`
-  display: flex;
   height: 100%;
-  width: 100%;
+  max-width: 1160px;
+  margin-left: auto;
+  margin-right: auto;
 `;
 
 const Main = styled.div`
   flex: 1;
-  padding: 10px 10px;
+  max-width: 780px;
+  margin: 15px auto 0 auto;
 `;
 
 export default Layout;

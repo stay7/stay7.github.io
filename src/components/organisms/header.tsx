@@ -7,8 +7,8 @@ import styled from "styled-components";
 
 //나중에 darkmode 도 넣고싶음
 const headers = [
-  { title: "Post", link: "post" },
-  { title: "About me", link: "me" },
+  { title: "Post", link: "/post" },
+  { title: "About me", link: "/me" },
 ];
 
 const Header = () => (
@@ -27,12 +27,14 @@ const Header = () => (
 );
 
 const Container = styled.div`
-  width: 100%;
   height: 66px;
-  display: inline-flex;
+  display: flex;
   align-items: center;
+  justify-content: space-between;
   background-color: white;
   border-bottom: 1px solid black;
+  margin-left: auto;
+  margin-right: auto;
 `;
 
 const Logo = styled.div`

@@ -13,12 +13,13 @@ const SideBar = () => {
 };
 
 const Container = styled.div`
-  display: flex;
+  /* display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center; */
+  left: 0;
   width: 250px;
   height: 100%;
-  margin-right: auto;
+  /* margin-right: auto; */
   border-right: 1px solid black;
 `;
 
