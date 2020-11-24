@@ -1,16 +1,18 @@
 import React from "react";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
-import styled from "styled-components";
 import { graphql } from "gatsby";
 import PostModel from "../model/postModel";
 import PostItem from "../components/organisms/postItem";
 
 const Post = ({ data }) => {
+  console.log("data", data);
+
   const {
     allMarkdownRemark: { edges },
   } = data;
-  const posts: Array<IPost> = edges.map(({ node }) => new PostModel(node));
+
+  const posts: Array<any> = edges.map((node: any) => new PostModel(node));
 
   return (
     <Layout>
@@ -22,6 +24,20 @@ const Post = ({ data }) => {
   );
 };
 
+// export const pageQuery = graphql`
+//   query {
+//     allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
+//       edges {
+//         node {
+//           id
+//           excerpt(pruneLength: 250)
+//           ...MarkdownFrontmatterFragment
+//         }
+//       }
+//     }
+//   }
+// `;
+
 export const pageQuery = graphql`
   query {
     allMarkdownRemark {
@@ -29,10 +45,9 @@ export const pageQuery = graphql`
         node {
           frontmatter {
             date
-            title
             path
+            title
           }
-          id
         }
       }
     }

@@ -3,28 +3,39 @@ import React from "react";
 import HeaderMenu from "../atom/headerMenu";
 import styled from "styled-components";
 
+import { graphql, useStaticQuery } from "gatsby";
+
 // https://www.gatesnotes.com/
 
 //나중에 darkmode 도 넣고싶음
-const headers = [
-  { title: "Post", link: "/post" },
-  { title: "About me", link: "/me" },
-];
 
-const Header = () => (
-  <Container>
-    <Logo>
-      <Link to="/" style={{ fontSize: "30px" }}>
-        logo
-      </Link>
-    </Logo>
-    <Menu>
-      {headers.map((header) => (
-        <HeaderMenu menuTitle={header.title} link={header.link} />
-      ))}
-    </Menu>
-  </Container>
-);
+const Header = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      allMarkdownRemark {
+        totalCount
+      }
+    }
+  `);
+
+  const postCount = data.allMarkdownRemark.totalCount;
+
+  return (
+    <Container>
+      <Logo>
+        <Link to="/" style={{ fontSize: "30px" }}>
+          logo
+        </Link>
+      </Logo>
+      <Menu>
+        <HeaderMenu menuTitle="Post" link="/posts" count={postCount} />
+        <HeaderMenu menuTitle="About me" link="/me" />
+      </Menu>
+    </Container>
+  );
+};
+
+export default Header;
 
 const Container = styled.div`
   height: 66px;
@@ -52,5 +63,3 @@ const Menu = styled.div`
   margin-left: auto;
   padding-right: 3rem;
 `;
-
-export default Header;

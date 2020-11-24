@@ -10,6 +10,7 @@ interface Props {
 //TODO : title, content, todo, thumbnail?
 const PostItem = ({ post }: Props) => {
   const { title, path, date } = post;
+  console.log(post);
   return (
     <div>
       <Link to={path}>

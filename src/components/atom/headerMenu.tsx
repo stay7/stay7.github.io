@@ -4,15 +4,17 @@ import styled from "styled-components";
 
 interface Props {
   menuTitle: string;
+  count?: number;
   link?: string;
 }
 
-export default function HeaderMenu({ menuTitle, link }: Props) {
+export default function HeaderMenu({ menuTitle, count, link }: Props) {
   return (
     <Button>
       {link && (
         <Link to={link}>
           <Span>{menuTitle}</Span>
+          {count && <Span>{` (${count})`}</Span>}
         </Link>
       )}
     </Button>

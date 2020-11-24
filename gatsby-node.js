@@ -12,12 +12,13 @@ exports.createPages = async ({ actions, graphql }) => {
   const { data, errors } = await graphql(`
     {
       allMarkdownRemark {
+        totalCount
         edges {
           node {
             frontmatter {
-              title
               date
-              path 
+              path
+              title
             }
           }
         }
@@ -34,7 +35,7 @@ exports.createPages = async ({ actions, graphql }) => {
 
   data.allMarkdownRemark.edges.forEach(({ node }) => {
     createPage({
-      path: node.frontmatter.path,
+      path: `posts/` + node.frontmatter.path,
       component: blogPostTemplate,
       context: {},
     });
