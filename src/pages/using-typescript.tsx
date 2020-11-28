@@ -44,7 +44,7 @@ export default UsingTypescript;
 export const query = graphql`
   {
     site {
-      buildTime(formatString: "YYYY-MM-DD hh:mm a z")
+      buildTime(formatString: "YYYY-MM-DD")
     }
   }
 `;

@@ -6,13 +6,13 @@ import PostModel from "../model/postModel";
 import PostItem from "../components/organisms/postItem";
 
 const Post = ({ data }) => {
-  console.log("data", data);
-
   const {
     allMarkdownRemark: { edges },
   } = data;
 
-  const posts: Array<any> = edges.map((node: any) => new PostModel(node));
+  const posts: Array<any> = edges.map(({ node }) => {
+    return new PostModel(node);
+  });
 
   return (
     <Layout>
@@ -44,9 +44,10 @@ export const pageQuery = graphql`
       edges {
         node {
           frontmatter {
-            date
+            date(formatString: "YYYY-MM-DD")
             path
             title
+            subtitle
           }
         }
       }

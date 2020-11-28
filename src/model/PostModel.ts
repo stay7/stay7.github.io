@@ -1,9 +1,10 @@
-import { INode } from "../constants/types";
+import { INode, IPost } from "../constants/types";
 
-export default class PostModel {
-  title: string;
-  path: string;
-  date: string;
+export default class PostModel implements IPost {
+  title;
+  path;
+  date;
+  subtitle?;
 
   constructor(node: any) {
     const { frontmatter } = node;
