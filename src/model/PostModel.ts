@@ -5,9 +5,12 @@ export default class PostModel implements IPost {
   path;
   date;
   subtitle?;
+  thumbnail?;
 
   constructor(node: any) {
     const { frontmatter } = node;
     Object.assign(this, frontmatter);
+    // this.thumbnail = require(`${this.thumbnail}`);
+    // console.log(this.thumbnail);
   }
 }

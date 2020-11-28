@@ -3,6 +3,7 @@ title: What is Lorem Ipsum?
 date: 2020-07-11
 path: ipsum
 subtitle: Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+thumbnail: /static/cat.png
 ---
 
 # Hi!

@@ -15,6 +15,7 @@ export interface IPost {
   path: string | undefined;
   date: string | undefined;
   subtitle?: string | undefined;
+  thumbnail?: any | undefined;
 }
 
 export type IMarkdownRemark = {
