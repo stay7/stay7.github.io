@@ -18,12 +18,14 @@ export default function TemplatePost({ data }: IProps) {
 }
 
 export const query = graphql`
-  query {
-    markdownRemark {
+  query($title: String!) {
+    markdownRemark(frontmatter: { title: { eq: $title } }) {
       html
       frontmatter {
         date
         path
+        subtitle
+        thumbnail
         title
       }
     }

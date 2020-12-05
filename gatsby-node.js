@@ -37,7 +37,9 @@ exports.createPages = async ({ actions, graphql }) => {
     createPage({
       path: `posts/` + node.frontmatter.path,
       component: blogPostTemplate,
-      context: {},
+      context: {
+        title: node.frontmatter.title,
+      },
     });
   });
 };
