@@ -6,6 +6,7 @@ export default class PostModel implements IPost {
   date;
   subtitle?;
   thumbnail?;
+  primate?;
 
   constructor(node: any) {
     const { frontmatter } = node;

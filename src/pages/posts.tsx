@@ -17,26 +17,12 @@ const Post = ({ data }) => {
   return (
     <Layout>
       <SEO title="post" />
-      {posts.map((post) => (
-        <PostItem post={post} />
-      ))}
+      {posts.map((post) => {
+        return <PostItem post={post} />;
+      })}
     </Layout>
   );
 };
-
-// export const pageQuery = graphql`
-//   query {
-//     allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
-//       edges {
-//         node {
-//           id
-//           excerpt(pruneLength: 250)
-//           ...MarkdownFrontmatterFragment
-//         }
-//       }
-//     }
-//   }
-// `;
 
 export const pageQuery = graphql`
   query {
