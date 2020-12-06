@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[8],{EiGo:function(e,n,t){"use strict";t.r(n);var a=t("q1tI"),o=t.n(a),l=t("9Dj+"),u=t("H8eV");n.default=function(){return o.a.createElement(l.a,null,o.a.createElement(u.a,{title:"me"}),o.a.createElement("h1",null,"404 bio not found"))}}}]);
+//# sourceMappingURL=component---src-pages-me-tsx-08cdec12bd9de535347d.js.map
