@@ -38,7 +38,6 @@ const Layout = ({ children }) => {
 
 const Container = styled.div`
   display: block;
-  height: 100vh;
 `;
 
 const Body = styled.div`
@@ -46,11 +45,12 @@ const Body = styled.div`
   max-width: 1160px;
   margin-left: auto;
   margin-right: auto;
+  padding-bottom: 48px;
 `;
 
 const Main = styled.div`
   flex: 1;
-  max-width: 780px;
+  max-width: 820px;
   margin: 15px auto 0 auto;
 `;
 
