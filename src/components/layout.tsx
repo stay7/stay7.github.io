@@ -10,6 +10,7 @@ import "./layout.css";
 import { useStaticQuery, graphql } from "gatsby";
 import styled from "styled-components";
 import "fontsource-roboto";
+import "fontsource-muli";
 import Header from "./organisms/header";
 import SideBar from "./organisms/sidebar";
 
