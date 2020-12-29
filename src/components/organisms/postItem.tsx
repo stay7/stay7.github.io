@@ -22,7 +22,7 @@ const PostItem = ({ post }: Props) => {
       }}
       style={thumbnail && { paddingLeft: 10 }}
     >
-      <Link to={path} style={thumbnail && imageStyle}>
+      <Link to={path} style={{ width: "100%", height: "100%" }}>
         <BorderBox color={over ? Color.blue : Color.white}>
           {thumbnail && <ImgBox src={thumbnail} />}
           <ContentBox>
@@ -41,14 +41,6 @@ const PostItem = ({ post }: Props) => {
   );
 };
 
-const imageStyle: CSSProperties = {
-  display: "flex",
-  width: "100%",
-  height: "100%",
-  flexDirection: "row",
-  alignItems: "center",
-};
-
 const Container = styled.div`
   display: flex;
   height: 170px;
@@ -61,6 +53,7 @@ const Container = styled.div`
 const BorderBox = styled.div`
   display: flex;
   width: 100%;
+  height: 100%;
   flex-direction: row;
   padding: 10px;
   ${(props) =>
