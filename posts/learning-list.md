@@ -1,5 +1,5 @@
 ---
-title: Dreams
+title: Learning
 date: 2020-01-01
 path: learning
 subtitle: Learning list
