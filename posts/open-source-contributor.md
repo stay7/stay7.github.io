@@ -27,6 +27,9 @@ subtitle: 세상에 약간 도움이 되었다
 한 줄의 코드를 넣었다. 
 ![한 줄의 코드](https://user-images.githubusercontent.com/62214433/105856701-dc8d3000-602c-11eb-9553-27b74cb5b645.png)
 
+
+### 결말
+
 내가 불편해서 수정한 단 한 줄의 코드이지만, 처음으로 나의 코드가 모르는 누군가에게 닿을 수 있다는 사실에 좋았다.
 
 ![image](https://user-images.githubusercontent.com/62214433/106006706-dc5a6680-60f8-11eb-9baf-c8f0ce34dbcc.png)
