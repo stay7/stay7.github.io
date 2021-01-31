@@ -2,6 +2,7 @@ import React from "react";
 import { graphql } from "gatsby";
 import Layout from "../layout";
 import { IProps } from "../../constants/types";
+import { PostDate, PostTitle } from "../atom";
 
 export default function TemplatePost({ data }: IProps) {
   const {
@@ -11,7 +12,8 @@ export default function TemplatePost({ data }: IProps) {
 
   return (
     <Layout>
-      <h1>{title}</h1>
+      <PostTitle title={title} />
+      <PostDate>{date}</PostDate>
       <div dangerouslySetInnerHTML={{ __html: html }} />
     </Layout>
   );
@@ -22,10 +24,9 @@ export const query = graphql`
     markdownRemark(frontmatter: { title: { eq: $title } }) {
       html
       frontmatter {
-        date
+        date(formatString: "YYYY.MM.DD")
         path
         subtitle
-        thumbnail
         title
       }
     }

@@ -9,7 +9,7 @@ interface Props {
 }
 
 const PostItem = ({ post }: Props) => {
-  const { title, path, date, subtitle, thumbnail } = post;
+  const { title, path, date, subtitle } = post;
   const [over, setOver] = useState(false);
 
   return (
@@ -20,11 +20,9 @@ const PostItem = ({ post }: Props) => {
       onMouseLeave={() => {
         setOver(false);
       }}
-      style={thumbnail && { paddingLeft: 10 }}
     >
       <Link to={path} style={{ width: "100%", height: "100%" }}>
         <BorderBox color={over ? Color.blue : Color.white}>
-          {thumbnail && <ImgBox src={thumbnail} />}
           <ContentBox>
             <Title>{title}</Title>
             <SubtitleBox>
