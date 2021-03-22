@@ -2,7 +2,7 @@ import Link from "../atom/link";
 import React from "react";
 import HeaderMenu from "../atom/headerMenu";
 import styled from "styled-components";
-
+import logo from "../../images/logo.svg";
 import { graphql, useStaticQuery } from "gatsby";
 
 // https://www.gatesnotes.com/
@@ -24,7 +24,7 @@ const Header = () => {
     <Container>
       <Logo>
         <Link to="/" style={{ fontSize: "30px" }}>
-          logo
+          <img src={logo} />
         </Link>
       </Logo>
       <Menu>
