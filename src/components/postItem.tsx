@@ -1,8 +1,8 @@
+import { Link } from "gatsby";
 import React, { useState, CSSProperties } from "react";
 import styled, { css } from "styled-components";
-import PostModel from "../../model/postModel";
-import Link from "../atom/link";
-import Color from "../../constants/color";
+import Color from "../constants/color";
+import PostModel from "../model/PostModel";
 
 interface Props {
   post: PostModel;

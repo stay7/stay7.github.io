@@ -1,8 +1,9 @@
 import React from "react";
 import { graphql } from "gatsby";
-import Layout from "../layout";
-import { IProps } from "../../constants/types";
-import { PostDate, PostTitle } from "../atom";
+import Layout from "./layout";
+import { IProps } from "../constants/types";
+import PostDate from "./post-date";
+import PostTitle from "./post-title";
 
 export default function TemplatePost({ data }: IProps) {
   const {

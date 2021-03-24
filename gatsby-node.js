@@ -30,7 +30,7 @@ exports.createPages = async ({ actions, graphql }) => {
 
   const blogPostTemplate = path.resolve(
     __dirname,
-    "./src/components/templates/templatePost.tsx"
+    "./src/components/templatePost.tsx"
   );
 
   data.allMarkdownRemark.edges.forEach(({ node }) => {
