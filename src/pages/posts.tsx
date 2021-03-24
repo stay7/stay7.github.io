@@ -1,9 +1,9 @@
 import React from "react";
-import Layout from "../layout";
-import SEO from "../seo";
+import Layout from "../components/layout";
+import SEO from "../components/seo";
 import { graphql } from "gatsby";
-import PostModel from "../../model/PostModel";
-import PostItem from "../postItem";
+import PostModel from "../model/PostModel";
+import PostItem from "../components/postItem";
 
 const Post = ({ data }) => {
   const {
