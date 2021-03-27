@@ -12,7 +12,7 @@ const Container = styled.div`
 
 const Body = styled.div`
   height: 100%;
-  width: 100%;
+  margin: 0 20px;
   padding-bottom: 48px;
 `;
 

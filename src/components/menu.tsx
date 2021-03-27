@@ -13,8 +13,8 @@ const Container = styled.div`
 const Title = styled.span`
   margin: auto 0;
   text-align: center;
-  font-weight: bold;
-  font-size: 20px;
+  font-weight: normal;
+  font-size: 16px;
 `;
 
 interface Props {
@@ -28,7 +28,6 @@ const Menu = ({ url, title, children }: Props) => {
     <Container
       onClick={() => {
         navigate(url);
-        console.log("clicked");
       }}
     >
       <Title>{title}</Title>
