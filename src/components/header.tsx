@@ -39,7 +39,7 @@ const Header = () => {
 
   return (
     <Container>
-      <LogoBox to="/">
+      <LogoBox to="/posts">
         <img src={logo} />
       </LogoBox>
       <MenuBox>
