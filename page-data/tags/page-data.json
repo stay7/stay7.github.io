@@ -1,1 +1,1 @@
-{"componentChunkName":"component---src-pages-tags-tsx","path":"/tags/","result":{"pageContext":{}},"staticQueryHashes":["3649515864","4221460748"]}
+{"componentChunkName":"component---src-pages-tags-tsx","path":"/tags/","result":{"data":{"allMarkdownRemark":{"edges":[{"node":{"frontmatter":{"tags":["daily"]}}},{"node":{"frontmatter":{"tags":["daily"]}}}]}},"pageContext":{}},"staticQueryHashes":["3649515864","4221460748"]}
