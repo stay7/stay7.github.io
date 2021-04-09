@@ -17,6 +17,16 @@ export interface IPost {
   subtitle?: string | undefined;
 }
 
+export interface IAllMarkdownRemark {
+  allMarkdownRemark: {
+    totalCount: number;
+    edges: [
+      {
+        node: IMarkdownFrontmatter;
+      }
+    ];
+  };
+}
 export type IMarkdownRemark = {
   markdownRemark: {
     html: string;

@@ -11,7 +11,7 @@ exports.createPages = async ({ actions, graphql }) => {
 
   const { data, errors } = await graphql(`
     {
-      allMarkdownRemark {
+      postRemark: allMarkdownRemark {
         totalCount
         edges {
           node {
@@ -19,8 +19,15 @@ exports.createPages = async ({ actions, graphql }) => {
               date
               path
               title
+              tags
             }
           }
+        }
+      }
+      tagsGroup: allMarkdownRemark {
+        group(field: frontmatter___tags) {
+          fieldValue
+          totalCount
         }
       }
     }
@@ -28,17 +35,39 @@ exports.createPages = async ({ actions, graphql }) => {
 
   if (errors) throw errors;
 
+  /**
+   * Post 페이지 생성
+   */
   const blogPostTemplate = path.resolve(
     __dirname,
-    "./src/components/templatePost.tsx"
+    "./src/components/template.post.tsx"
   );
-
-  data.allMarkdownRemark.edges.forEach(({ node }) => {
+  const posts = data.postRemark.edges;
+  posts.forEach(({ node }) => {
     createPage({
-      path: `posts/` + node.frontmatter.path,
+      path: `posts/ + ${node.frontmatter.path}`,
       component: blogPostTemplate,
       context: {
         title: node.frontmatter.title,
+      },
+    });
+  });
+
+  /**
+   * Tag 페이지 생성
+   */
+  const tagTemplate = path.resolve(
+    __dirname,
+    "./src/components/template.tag.tsx"
+  );
+
+  const tags = data.tagsGroup.group;
+  tags.forEach((tag) => {
+    createPage({
+      path: `tags/${tag.fieldValue}`,
+      component: tagTemplate,
+      context: {
+        tag: tag.fieldValue,
       },
     });
   });

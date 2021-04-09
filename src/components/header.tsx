@@ -19,6 +19,7 @@ const LogoBox = styled(Link)`
   align-items: center;
 `;
 const MenuBox = styled.div`
+  display: flex;
   margin-left: auto;
 `;
 
@@ -44,6 +45,8 @@ const Header = () => {
       </LogoBox>
       <MenuBox>
         <Menu url="/posts" title={`Post(${postCount})`}></Menu>
+        <Menu url="/tags" title={`Tags(${postCount})`}></Menu>
+        <Menu url="/me" title={`Me`}></Menu>
       </MenuBox>
     </Container>
   );
