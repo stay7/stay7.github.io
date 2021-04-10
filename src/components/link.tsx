@@ -1,7 +1,7 @@
 import { Link } from "gatsby";
 import React from "react";
 import styled from "styled-components";
-import color from "../constants/color";
+import color from "../constants/constants";
 
 const GatsbyLink = styled(Link)`
   width: 100%;

@@ -44,8 +44,8 @@ const Header = () => {
         <img src={logo} />
       </LogoBox>
       <MenuBox>
-        <Menu url="/posts" title={`Post(${postCount})`}></Menu>
-        <Menu url="/tags" title={`Tags(${postCount})`}></Menu>
+        <Menu url="/posts" title={`Post`}></Menu>
+        <Menu url="/tags" title={`Tags`}></Menu>
         <Menu url="/me" title={`Me`}></Menu>
       </MenuBox>
     </Container>

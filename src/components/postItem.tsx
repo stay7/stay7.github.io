@@ -1,6 +1,6 @@
 import React, { useState, CSSProperties } from "react";
 import styled, { css } from "styled-components";
-import color from "../constants/color";
+import color from "../constants/constants";
 import PostModel from "../model/PostModel";
 import Link from "./link";
 
