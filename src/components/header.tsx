@@ -45,7 +45,6 @@ const Header = () => {
       </LogoBox>
       <MenuBox>
         <Menu url="/posts" title={`Post`}></Menu>
-        <Menu url="/tags" title={`Tags`}></Menu>
         <Menu url="/me" title={`Me`}></Menu>
       </MenuBox>
     </Container>

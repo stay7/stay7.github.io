@@ -17,8 +17,9 @@ const Body = styled.div`
 `;
 
 const Main = styled.div`
-  max-width: 820px;
-  max-width: 1160px;
+  max-width: 1024px;
+  /* max-width: 820px; */
+  /* max-width: 1160px; */
   margin: 15px auto 0 auto;
 `;
 
