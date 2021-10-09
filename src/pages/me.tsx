@@ -51,6 +51,9 @@ const Me = () => (
             <BlockItem style={{ paddingLeft: 25 }}>
               단순 반복되는 동작을 자동화시키는 것을 좋아하는
             </BlockItem>
+            <BlockItem style={{ paddingLeft: 25 }}>
+              직접 만들어보면서 배우는
+            </BlockItem>
 
             <BlockItem icon={<FcGraduationCap />}>
               경북대학교 컴퓨터학부 (2014.02 ~ 2021.02)
