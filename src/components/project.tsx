@@ -84,9 +84,9 @@ const Project = ({
         </RowBox>
         <RowBox>
           {links.map(({ link, icon }) => (
-            <Link style={{ margin: "6px" }} to={link}>
+            <a style={{ margin: "6px" }} href={link} target="_blank">
               {icon}
-            </Link>
+            </a>
           ))}
         </RowBox>
 
