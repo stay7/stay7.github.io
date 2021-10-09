@@ -1,14 +1,19 @@
 import { StaticImage } from "gatsby-plugin-image";
 import React, { ReactElement } from "react";
-import styled from "styled-components";
+import styled, { CSSProperties } from "styled-components";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
-import { BsGithub } from "react-icons/bs";
-import { ImMail4 } from "react-icons/im";
+import { FiGithub } from "react-icons/fi";
 import { IconType } from "react-icons/lib";
+import {
+  FcAbout,
+  FcAddressBook,
+  FcGraduationCap,
+  FcGlobe,
+} from "react-icons/fc";
 import { AiFillAndroid, AiFillApple } from "react-icons/ai";
 import { VscDebugBreakpointData } from "react-icons/vsc";
-import { IoHomeOutline } from "react-icons/io5";
+
 import { Link } from "gatsby";
 import Project from "../components/project";
 
@@ -30,13 +35,23 @@ const Me = () => (
         <Row>
           <Octocat />
           <div>
-            <BlockItem>서상민</BlockItem>
-            <BlockItem>경북대학교 컴퓨터학부 (2014.02 ~ 2021.02)</BlockItem>
+            <BlockItem icon={<FcAbout size={25} />}>
+              저는 ㅇㅇㅇ 사람입니다
+            </BlockItem>
+            <BlockItem style={{ paddingLeft: 70 }}>
+              현실에서는 안정을 추구하지만, 컴퓨터 세상에서는 도전적인
+            </BlockItem>
+            <BlockItem style={{ paddingLeft: 70 }}>
+              단순 반복되는 동작을 자동화시키는 것을 좋아하는
+            </BlockItem>
 
-            <BlockItem icon={<ImMail4 size={25} />}>
+            <BlockItem icon={<FcGraduationCap />}>
+              경북대학교 컴퓨터학부 (2014.02 ~ 2021.02)
+            </BlockItem>
+            <BlockItem icon={<FcAddressBook size={25} />}>
               <span>sangmin95@gmail.com</span>
             </BlockItem>
-            <BlockItem icon={<BsGithub size={25} />}>
+            <BlockItem icon={<FiGithub size={25} />}>
               <Link to="https://github.com/stay7" target="_blank">
                 stay7
               </Link>
@@ -51,7 +66,7 @@ const Me = () => (
         links={[
           {
             link: "https://wegram.co.kr/#Home",
-            icon: <IoHomeOutline size={25} />,
+            icon: <FcGlobe size={25} />,
           },
           {
             link:
@@ -87,7 +102,7 @@ const Me = () => (
         links={[
           {
             link: "https://github.com/stay7/oneway-server",
-            icon: <BsGithub size={25} />,
+            icon: <FiGithub size={25} />,
           },
         ]}
         tags={[
@@ -115,7 +130,7 @@ const Me = () => (
         links={[
           {
             link: "https://github.com/stay7/boj-cli-python",
-            icon: <BsGithub size={25} />,
+            icon: <FiGithub size={25} />,
           },
         ]}
         duration="2021.08.11 ~ 2021.08.15 (4일)"
@@ -155,10 +170,11 @@ const Container = styled.div`
 
 interface BlockProp {
   icon?: ReactElement<IconType>;
+  style?: CSSProperties;
   children: ReactElement | string;
 }
 
-const BlockItem = ({ icon, children }: BlockProp) => {
+const BlockItem = ({ icon, style, children }: BlockProp) => {
   return (
     <div
       style={{
@@ -166,6 +182,7 @@ const BlockItem = ({ icon, children }: BlockProp) => {
         flexDirection: "row",
         alignItems: "center",
         margin: "10px 50px",
+        ...style,
       }}
     >
       {icon || <VscDebugBreakpointData />}
