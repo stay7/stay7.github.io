@@ -4,7 +4,9 @@ import { VscDebugBreakpointData } from "react-icons/vsc";
 import { IconType } from "react-icons/lib";
 import { Link } from "gatsby";
 
-const ImgBox = styled.div``;
+const ImgBox = styled.div`
+  margin: auto 0px;
+`;
 
 const Paragraph = styled.p`
   padding: 0px 20px;
@@ -76,19 +78,19 @@ const Project = ({
       <Paragraph>
         <ProjectTitle>{title}</ProjectTitle>
         <RowBox>
+          {tags.map((tag) => (
+            <Tag color={tag.color}>{tag.tag}</Tag>
+          ))}
+        </RowBox>
+        <RowBox>
           {links.map(({ link, icon }) => (
-            <Link style={{ margin: "0px 5px" }} to={link}>
+            <Link style={{ margin: "6px" }} to={link}>
               {icon}
             </Link>
           ))}
         </RowBox>
 
         <ProjectBullet>{duration}</ProjectBullet>
-        <RowBox>
-          {tags.map((tag) => (
-            <Tag color={tag.color}>{tag.tag}</Tag>
-          ))}
-        </RowBox>
         {contents.map((content) => (
           <ProjectBullet>{content}</ProjectBullet>
         ))}

@@ -26,6 +26,13 @@ const Octocat = () => (
   />
 );
 
+const TagColor = {
+  frontEnd: "#900020",
+  backEnd: "#274472",
+  language: "#59981A",
+  etc: "black",
+};
+
 const Me = () => (
   <Layout>
     <SEO title="me" />
@@ -38,10 +45,10 @@ const Me = () => (
             <BlockItem icon={<FcAbout size={25} />}>
               저는 ㅇㅇㅇ 사람입니다
             </BlockItem>
-            <BlockItem style={{ paddingLeft: 70 }}>
+            <BlockItem style={{ paddingLeft: 25 }}>
               현실에서는 안정을 추구하지만, 컴퓨터 세상에서는 도전적인
             </BlockItem>
-            <BlockItem style={{ paddingLeft: 70 }}>
+            <BlockItem style={{ paddingLeft: 25 }}>
               단순 반복되는 동작을 자동화시키는 것을 좋아하는
             </BlockItem>
 
@@ -79,9 +86,15 @@ const Me = () => (
           },
         ]}
         duration="2020.02 ~ 2021.06 (1년 4개월)"
-        tags={[{ tag: "React Native", color: "blue" }]}
+        tags={[
+          { tag: "React Native", color: TagColor.frontEnd },
+          { tag: "Express.js", color: TagColor.backEnd },
+          { tag: "MongoDB", color: TagColor.backEnd },
+          { tag: "Elasticsearch", color: TagColor.backEnd },
+        ]}
         contents={[
           "간헐적 단식을 통해 다이어트 솔루션을 제공하는 어플리케이션",
+          "창업한 스타트업에서 진행한 프로젝트입니다",
           "MAU: 2500, DAU: 300",
           "출시부터 서비스 운영까지 경험해 볼 수 있었습니다.",
         ]}
@@ -106,12 +119,14 @@ const Me = () => (
           },
         ]}
         tags={[
-          { tag: "Toy Project", color: "blue" },
-          { tag: "NestJS", color: "blue" },
-          { tag: "Flutter", color: "blue" },
+          { tag: "Toy Project", color: TagColor.etc },
+          { tag: "Flutter", color: TagColor.frontEnd },
+          { tag: "NestJS", color: TagColor.backEnd },
+          { tag: "PostgreSQL", color: TagColor.backEnd },
         ]}
         contents={[
-          "직접 사용하기 위한 용도로 개발한 영어 단어장 어플리케이션",
+          "Flutter, NestJS, PostgreSQL을 경험해보고 싶어서 진행한 프로젝트",
+          "직접 유저가 될 서비스를 만들어야한다는 생각을 가지고 있어 영어 단어장 어플을 만들었습니다.",
           "앱 컨셉이 마음에 들지 않아서 아직 출시는 하지 않았습니다.",
         ]}
       >
@@ -134,7 +149,7 @@ const Me = () => (
           },
         ]}
         duration="2021.08.11 ~ 2021.08.15 (4일)"
-        tags={[{ tag: "RUST", color: "blue" }]}
+        tags={[{ tag: "RUST", color: TagColor.language }]}
         contents={[
           "백준 온라인 저지의 샘플 테스트 케이스를 받아와 실행 결과를 보여주는 CLI 입니다.",
           "매번 input을 입력하고 output을 비교하는 과정이 번거로워 만들었습니다.",
