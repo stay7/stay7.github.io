@@ -17,11 +17,11 @@ import { VscDebugBreakpointData } from "react-icons/vsc";
 import { Link } from "gatsby";
 import Project from "../components/project";
 
-const Octocat = () => (
+const Profile = () => (
   <StaticImage
-    src="../images/octocat.png"
-    alt="octocat"
-    width={300}
+    src="../images/profile.jpeg"
+    alt="profile"
+    width={500}
     height={300}
   />
 );
@@ -40,7 +40,7 @@ const Me = () => (
       <Title>🙋🏻 ME</Title>
       <Paragraph>
         <Row>
-          <Octocat />
+          <Profile />
           <div>
             <BlockItem icon={<FcAbout size={25} />}>
               저는 ㅇㅇㅇ 사람입니다
