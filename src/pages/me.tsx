@@ -16,12 +16,13 @@ import { VscDebugBreakpointData } from "react-icons/vsc";
 
 import Project from "../components/project";
 import color from "../constants/constants";
+import Tag from "../components/tag";
 
 const Profile = () => (
   <StaticImage
     src="../images/profile.jpeg"
     alt="profile"
-    width={500}
+    width={450}
     height={300}
   />
 );
@@ -36,14 +37,14 @@ const TagColor = {
 const Me = () => (
   <Layout>
     <SEO title="me" />
-    <Container>
-      <Title>🙋🏻 ME</Title>
+    <div>
+      <Title>🙋🏻 ME! 서상민</Title>
       <Paragraph>
         <Row>
           <Profile />
           <div>
             <BlockItem icon={<FcAbout size={25} />}>
-              저는 ㅇㅇㅇ 사람입니다
+              저는 ○○○한 사람입니다
             </BlockItem>
             <BlockItem style={{ paddingLeft: 25 }}>
               현실에서는 안정을 추구하지만, 컴퓨터 세상에서는 도전적인
@@ -56,7 +57,7 @@ const Me = () => (
             </BlockItem>
 
             <BlockItem icon={<FcGraduationCap />}>
-              경북대학교 컴퓨터학부 (2014.02 ~ 2021.02)
+              경북대학교 컴퓨터학부 졸업 (2014.02 ~ 2021.02)
             </BlockItem>
             <BlockItem icon={<FcAddressBook size={25} />}>
               <span>sangmin95@gmail.com</span>
@@ -67,6 +68,28 @@ const Me = () => (
               </a>
             </BlockItem>
           </div>
+        </Row>
+      </Paragraph>
+
+      <Title>🛠 Skills</Title>
+      <Paragraph>
+        <SkillTitle>Front-End</SkillTitle>
+        <Row>
+          <Tag color={color.black}>React</Tag>
+        </Row>
+        <SkillTitle>Back-End</SkillTitle>
+        <Row>
+          <Tag color={color.black}>Node.js</Tag>
+          <Tag color={color.black}>MongoDB</Tag>
+        </Row>
+        <SkillTitle>Mobile</SkillTitle>
+        <Row>
+          <Tag color={color.black}>React Native</Tag>
+        </Row>
+        <SkillTitle>Language</SkillTitle>
+        <Row>
+          <Tag color={color.black}>Javascript</Tag>
+          <Tag color={color.black}>Python</Tag>
         </Row>
       </Paragraph>
 
@@ -98,7 +121,7 @@ const Me = () => (
           ]}
           contents={[
             "간헐적 단식을 통해 다이어트 솔루션을 제공하는 어플리케이션",
-            "창업한 스타트업에서 진행한 프로젝트입니다",
+            "창업한 스타트업에서 진행한 프로젝트입니다.",
             "MAU: 2500, DAU: 300",
             "출시부터 서비스 운영까지 경험해 볼 수 있었습니다.",
           ]}
@@ -126,6 +149,7 @@ const Me = () => (
             { tag: "Flutter", color: TagColor.frontEnd },
             { tag: "NestJS", color: TagColor.backEnd },
             { tag: "PostgreSQL", color: TagColor.backEnd },
+            { tag: "Jest", color: TagColor.etc },
           ]}
           contents={[
             "Flutter, NestJS, PostgreSQL을 경험해보고 싶어서 진행한 프로젝트",
@@ -167,7 +191,7 @@ const Me = () => (
           />
         </Project>
       </Paragraph>
-    </Container>
+    </div>
   </Layout>
 );
 
@@ -182,8 +206,10 @@ const Paragraph = styled.p`
   padding: 0px 20px;
 `;
 
-const Container = styled.div`
-  /* background-color: red; */
+const SkillTitle = styled.div`
+  font-size: 25px;
+  font-weight: bold;
+  padding: 5px 0px;
 `;
 
 interface BlockProp {
