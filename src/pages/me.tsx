@@ -14,8 +14,8 @@ import {
 import { AiFillAndroid, AiFillApple } from "react-icons/ai";
 import { VscDebugBreakpointData } from "react-icons/vsc";
 
-import { Link } from "gatsby";
 import Project from "../components/project";
+import color from "../constants/constants";
 
 const Profile = () => (
   <StaticImage
@@ -27,10 +27,10 @@ const Profile = () => (
 );
 
 const TagColor = {
-  frontEnd: "#900020",
-  backEnd: "#274472",
-  language: "#59981A",
-  etc: "black",
+  frontEnd: color.burgundy,
+  backEnd: color.navy,
+  language: color.green,
+  etc: color.black,
 };
 
 const Me = () => (
