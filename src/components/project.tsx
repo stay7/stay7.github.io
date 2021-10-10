@@ -2,7 +2,7 @@ import React, { ReactComponentElement } from "react";
 import styled from "styled-components";
 import { VscDebugBreakpointData } from "react-icons/vsc";
 import { IconType } from "react-icons/lib";
-import { Link } from "gatsby";
+import Tag, { TagProp } from "./tag";
 
 const ImgBox = styled.div`
   margin: auto 0px;
@@ -22,17 +22,6 @@ const ProjectTitle = styled.div`
   font-size: 30px;
   font-weight: bold;
   padding: 5px 0px;
-`;
-
-const Tag = styled.span<{ color: string }>`
-  height: 28px;
-  color: white;
-  font-size: 16px;
-  font-weight: bold;
-  background-color: ${(props) => props.color};
-  margin: 6px;
-  padding: 4px 12px;
-  border-radius: 5px;
 `;
 
 const RowBox = styled.div`
@@ -57,11 +46,6 @@ interface ProjectProp {
 interface LinkProp {
   link: string;
   icon: ReactComponentElement<IconType>;
-}
-
-interface TagProp {
-  tag: string;
-  color: string;
 }
 
 const Project = ({
