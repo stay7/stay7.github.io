@@ -56,9 +56,9 @@ const Me = () => (
               직접 만들어보면서 배우는
             </BlockItem>
 
-            <BlockItem icon={<FcGraduationCap />}>
+            {/* <BlockItem icon={<FcGraduationCap />}>
               경북대학교 컴퓨터학부 졸업 (2014.02 ~ 2021.02)
-            </BlockItem>
+            </BlockItem> */}
             <BlockItem icon={<FcAddressBook size={25} />}>
               <span>sangmin95@gmail.com</span>
             </BlockItem>
