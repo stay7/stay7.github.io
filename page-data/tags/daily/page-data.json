@@ -1,5 +1,5 @@
 {
     "componentChunkName": "component---src-components-template-tag-tsx",
     "path": "/tags/daily",
-    "result": {"data":{"allMarkdownRemark":{"totalCount":2,"edges":[{"node":{"frontmatter":{"title":"처음으로 오픈소스 컨트리뷰터가 된 후기"}}},{"node":{"frontmatter":{"title":"새로운 방식의 Note taking. [Roam Research]"}}}]}},"pageContext":{"tag":"daily"}},
+    "result": {"data":{"allMarkdownRemark":{"totalCount":2,"edges":[{"node":{"frontmatter":{"title":"새로운 방식의 Note taking. [Roam Research]"}}},{"node":{"frontmatter":{"title":"처음으로 오픈소스 컨트리뷰터가 된 후기"}}}]}},"pageContext":{"tag":"daily"}},
     "staticQueryHashes": ["3649515864","4221460748"]}

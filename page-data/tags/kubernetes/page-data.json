@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-components-template-tag-tsx",
+    "path": "/tags/kubernetes",
+    "result": {"data":{"allMarkdownRemark":{"totalCount":1,"edges":[{"node":{"frontmatter":{"title":"쿠버네티스 배포 전략"}}}]}},"pageContext":{"tag":"kubernetes"}},
+    "staticQueryHashes": ["3649515864","4221460748"]}
