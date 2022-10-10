@@ -4,6 +4,7 @@ import SEO from "../components/seo";
 import { graphql } from "gatsby";
 import PostModel from "../model/PostModel";
 import PostItem from "../components/postItem";
+import "../styles/post.css";
 
 const Post = ({ data }) => {
   const {

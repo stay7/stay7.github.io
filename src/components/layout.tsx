@@ -1,9 +1,7 @@
 import React from "react";
-import "./layout.css";
+import "../styles/layout.css";
 import { useStaticQuery, graphql } from "gatsby";
 import styled from "styled-components";
-import "fontsource-roboto";
-import "fontsource-muli";
 import Header from "./header";
 
 const Container = styled.div`
@@ -36,8 +34,6 @@ const Layout = ({ children }) => {
 
   return (
     <Container>
-      {/* <Header siteTitle={data.site.siteMetadata?.title || `Title`} /> */}
-
       <Body>
         <Header />
         <Main>{children}</Main>
